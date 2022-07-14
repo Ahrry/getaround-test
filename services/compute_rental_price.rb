@@ -1,6 +1,5 @@
 require './services/base_service'
-require './services/car_price'
-require 'byebug'
+require './services/car_day_price'
 
 class ComputeRentalPrice < BaseService
   def call(with_discount: false)
@@ -22,12 +21,8 @@ class ComputeRentalPrice < BaseService
   private
 
   def day_price(car:, rental:, with_discount:)
-    car_price_per_day = CarPrice.new(
-      price: car.price_per_day,
-      rental_length: rental.length
-    ).per_day(with_discount: with_discount)
-
-    rental.length * car_price_per_day
+    card_day_price = CarDayPrice.new(price: car.price_per_day, rental_length: rental.length)
+    with_discount ? card_day_price.price_with_discount : card_day_price.price_without_discount
   end
 
   def km_price(car:, rental:)
