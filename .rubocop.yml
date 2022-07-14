@@ -1,0 +1,44 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+  Severity: warning
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Security/YAMLLoad:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+
