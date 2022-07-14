@@ -4,7 +4,8 @@ require './rental'
 
 class BaseService
   def initialize(input_file_path:)
-    @input_json = File.read(input_file_path)
+    @input_file_path = input_file_path
+    @input_json = File.read(@input_file_path)
   end
 
   private
