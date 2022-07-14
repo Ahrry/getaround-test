@@ -14,7 +14,7 @@ class BaseService
   end
 
   def json_car(id:)
-    json_cars.detect{ |json_car| json_car['id'] == id }
+    json_cars.detect { |json_car| json_car['id'] == id }
   end
 
   def json_rentals
@@ -22,7 +22,7 @@ class BaseService
   end
 
   def json_rental(id:)
-    json_rentals.detect{ |json_rental| json_rental['id'] == id }
+    json_rentals.detect { |json_rental| json_rental['id'] == id }
   end
 
   def parsed_json
