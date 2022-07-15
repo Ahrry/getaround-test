@@ -25,6 +25,14 @@ class Rental
     @json['distance']
   end
 
+  def price
+    @json['price']
+  end
+
+  def commission
+    @json['commission']
+  end
+
   def length
     # NOTE: we need to increment by one to include the first day
     (end_date - start_date).to_i + 1
