@@ -26,6 +26,20 @@ class BaseService
     json_rentals.detect { |json_rental| json_rental['id'] == id }
   end
 
+  def json_options
+    parsed_json['options']
+  end
+
+  def json_option(id:)
+    json_options.detect { |json_option| json_option['id'] == id }
+  end
+
+  def json_options_from_rental(rental_id:)
+    return [] if json_options.nil?
+
+    json_options.select { |json_option| json_option['rental_id'] == rental_id }
+  end
+
   def parsed_json
     JSON.parse(@input_json)
   end
