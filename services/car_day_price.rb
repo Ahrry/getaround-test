@@ -4,7 +4,7 @@ DISCOUNT_FACTORS = {
   after_ten_days: { nb_days: 10, factor: 0.5 },
   after_four_days: { nb_days: 4, factor: 0.3 },
   after_one_day: { nb_days: 1, factor: 0.1 }
-}
+}.freeze
 
 class CarDayPrice
   def initialize(price:, rental_length:)
